@@ -1,0 +1,2 @@
+SELECT COUNT(Tarjeta) as TRX FROM [TRXRedBus].[dbo].[TrxDW] 
+where MONTH(Fecha) = MONTH('2015-07-01');
