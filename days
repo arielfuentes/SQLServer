@@ -1,0 +1,3 @@
+SELECT distinct(DAY(Fecha)) as dia FROM [TRXRedBus].[dbo].[TrxDW] 
+where MONTH(Fecha) = MONTH('2015-07-01')
+order by dia ASC;
