@@ -1,3 +1,8 @@
 SELECT distinct(DAY(Fecha)) as dia FROM [TRXRedBus].[dbo].[TrxDW] 
 where MONTH(Fecha) = MONTH('2015-07-01')
 order by dia ASC;
+---------------------------
+SELECT DISTINCT(DAY([Fecha])) AS DIA, MONTH([Fecha])AS MES
+FROM [TRXRedBus].[dbo].[TrxDW]
+WHERE MONTH([Fecha]) > MONTH('2015-10-12')
+ORDER BY DIA
