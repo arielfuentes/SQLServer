@@ -1,0 +1,8 @@
+SELECT [Fecha]
+      ,CAST(REPLACE([TRX], ',', '.') AS float) AS TRX
+      ,[IDMH]
+      ,[IDTipoDia]
+      ,[id_servicio]
+      ,[IDMaquina]
+      ,[IDServicio]
+ FROM [ESTUDIOS].[dbo].[TRX] where MONTH(Fecha) = MONTH('2015-12-01') and YEAR(Fecha) = YEAR('2015-07-01');
