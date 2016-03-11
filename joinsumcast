@@ -1,0 +1,9 @@
+SELECT SUM(CAST(REPLACE([TRX].[TRX], ',', '.') AS float)) AS TRXMES
+	  ,MONTH([TRX].[Fecha]) AS MES  
+      ,[Tipo_Dia].[Tipo]
+      ,[Servicios].[Servicio]
+  FROM [ESTUDIOS].[dbo].[TRX]
+  INNER JOIN Servicios ON [TRX].[IDServicio] = [Servicios].[IDServicio]
+  INNER JOIN Tipo_Dia ON [TRX].[IDTipoDia] = [Tipo_Dia].[IDTipoDia]
+  WHERE [TRX].[Fecha] >= '2015-01-11 00:00:00' AND [TRX].[Fecha] <= '2015-30-11 23:59:59'
+  GROUP BY MONTH([TRX].[Fecha]), [Tipo_Dia].[Tipo], [Servicios].[Servicio];
