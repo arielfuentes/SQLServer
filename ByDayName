@@ -1,0 +1,12 @@
+SELECT [id_movil]
+      ,[ppu]
+      ,[kmh]
+      ,[fecha]
+      ,[latitud]
+      ,[longitud]
+      ,[observaciones]
+     
+  FROM [Seguimiento].[dbo].[reporte_seguimiento]
+  WHERE MONTH(fecha) = 2 AND YEAR(fecha) = 2016 AND DATENAME(DW, fecha) in 
+  ('Lunes', 'Martes', 'Miércoles', 'Jueves')
+  ORDER BY fecha
