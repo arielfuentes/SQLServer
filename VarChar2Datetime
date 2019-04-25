@@ -1,0 +1,1 @@
+DAY(CONVERT(Datetime, [tiempo_bajada],120))
